@@ -32,6 +32,15 @@ class _BottomNavigationBarHome extends State<BottomNavigationBarHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF032030),
+          title: const Text('Inventario', style: TextStyle(color: Colors.white)),
+          actions: [
+            IconButton(icon: const Icon(Icons.add_circle_outline, color: Colors.white,), onPressed: () {
+
+            })
+          ],
+        ),
         body: Center(
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
