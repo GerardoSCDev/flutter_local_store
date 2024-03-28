@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:local_store/app/generated/translations.g.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({super.key});
@@ -16,11 +17,13 @@ class _BottomNavigationBarHome extends State<BottomNavigationBarHome> {
     Text('Index 0', style: optionStyle),
     Text('Index 1', style: optionStyle),
   ];
-  static const List<BottomNavigationBarItem> _bottomNavigationBarItems = [
+  static final List<BottomNavigationBarItem> _bottomNavigationBarItems = [
     BottomNavigationBarItem(
-        icon: Icon(Icons.inventory_outlined), label: 'Inventario'),
+        icon: const Icon(Icons.inventory_outlined),
+        label: texts.home.navBarBottomItemInventoryTitle),
     BottomNavigationBarItem(
-        icon: Icon(Icons.point_of_sale_sharp), label: 'Ventas'),
+        icon: const Icon(Icons.point_of_sale_sharp),
+        label: texts.home.navBarBottomItemSalesTitle),
   ];
 
   void _onItemTapped(int index) {
@@ -34,11 +37,15 @@ class _BottomNavigationBarHome extends State<BottomNavigationBarHome> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF032030),
-          title: const Text('Inventario', style: TextStyle(color: Colors.white)),
+          title:
+              const Text('Inventarioo', style: TextStyle(color: Colors.white)),
           actions: [
-            IconButton(icon: const Icon(Icons.add_circle_outline, color: Colors.white,), onPressed: () {
-
-            })
+            IconButton(
+                icon: const Icon(
+                  Icons.add_circle_outline,
+                  color: Colors.white,
+                ),
+                onPressed: () {})
           ],
         ),
         body: Center(
