@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:local_store/app/generated/translations.g.dart';
+import 'package:local_store/app/presentation/modules/inventory/InventoryPage.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({super.key});
@@ -14,17 +15,23 @@ class _BottomNavigationBarHome extends State<BottomNavigationBarHome> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text('Index 0', style: optionStyle),
+    InventoryPage(),
     Text('Index 1', style: optionStyle),
+  ];
+  static final List<String> _titlesPages = [
+    texts.home.navBarBottomItemInventoryTitle,
+    texts.home.navBarBottomItemSalesTitle
   ];
   static final List<BottomNavigationBarItem> _bottomNavigationBarItems = [
     BottomNavigationBarItem(
         icon: const Icon(Icons.inventory_outlined),
-        label: texts.home.navBarBottomItemInventoryTitle),
+        label: _titlesPages[0]),
     BottomNavigationBarItem(
         icon: const Icon(Icons.point_of_sale_sharp),
-        label: texts.home.navBarBottomItemSalesTitle),
+        label: _titlesPages[1]),
   ];
+
+
 
   void _onItemTapped(int index) {
     setState(() {
@@ -38,7 +45,10 @@ class _BottomNavigationBarHome extends State<BottomNavigationBarHome> {
         appBar: AppBar(
           backgroundColor: const Color(0xFF032030),
           title:
-              const Text('Inventarioo', style: TextStyle(color: Colors.white)),
+              Text(
+                  _titlesPages[_selectedIndex],
+                  style: const TextStyle(color: Colors.white)
+              ),
           actions: [
             IconButton(
                 icon: const Icon(
