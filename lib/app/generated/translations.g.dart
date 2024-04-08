@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 4 (2 per locale)
+/// Strings: 6 (3 per locale)
 ///
-/// Built on 2024-03-27 at 23:51 UTC
+/// Built on 2024-04-04 at 16:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -149,6 +149,7 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 
 	// Translations
 	late final _TranslationsHomeEn home = _TranslationsHomeEn._(_root);
+	late final _TranslationsInventoryEn Inventory = _TranslationsInventoryEn._(_root);
 }
 
 // Path: home
@@ -160,6 +161,16 @@ class _TranslationsHomeEn {
 	// Translations
 	String get navBarBottomItemInventoryTitle => 'Inventory';
 	String get navBarBottomItemSalesTitle => 'Sales';
+}
+
+// Path: Inventory
+class _TranslationsInventoryEn {
+	_TranslationsInventoryEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get filterBarTextFieldTitle => 'Search...';
 }
 
 // Path: <root>
@@ -187,6 +198,7 @@ class _TranslationsEs implements Translations {
 
 	// Translations
 	@override late final _TranslationsHomeEs home = _TranslationsHomeEs._(_root);
+	@override late final _TranslationsInventoryEs Inventory = _TranslationsInventoryEs._(_root);
 }
 
 // Path: home
@@ -200,6 +212,16 @@ class _TranslationsHomeEs implements _TranslationsHomeEn {
 	@override String get navBarBottomItemSalesTitle => 'Ventas';
 }
 
+// Path: Inventory
+class _TranslationsInventoryEs implements _TranslationsInventoryEn {
+	_TranslationsInventoryEs._(this._root);
+
+	@override final _TranslationsEs _root; // ignore: unused_field
+
+	// Translations
+	@override String get filterBarTextFieldTitle => 'Buscar...';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -208,6 +230,7 @@ extension on Translations {
 		switch (path) {
 			case 'home.navBarBottomItemInventoryTitle': return 'Inventory';
 			case 'home.navBarBottomItemSalesTitle': return 'Sales';
+			case 'Inventory.filterBarTextFieldTitle': return 'Search...';
 			default: return null;
 		}
 	}
@@ -218,6 +241,7 @@ extension on _TranslationsEs {
 		switch (path) {
 			case 'home.navBarBottomItemInventoryTitle': return 'Inventario';
 			case 'home.navBarBottomItemSalesTitle': return 'Ventas';
+			case 'Inventory.filterBarTextFieldTitle': return 'Buscar...';
 			default: return null;
 		}
 	}
