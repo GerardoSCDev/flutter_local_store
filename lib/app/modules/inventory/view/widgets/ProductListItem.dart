@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:local_store/app/modules/inventory/models/InventoryModel.dart';
+import 'package:local_store/app/modules/inventory/viewmodel/ProductListItemViewModel.dart';
 
 class ProductListItem extends StatelessWidget {
   final String productName;
   final String quantity;
   final String barcode;
 
-  const ProductListItem(
+  ProductListItem(
       {super.key,
       required this.productName,
       required this.quantity,
       required this.barcode});
 
+  final  productListItemVM = ProductListItemViewModel();
+
   Color getColorStatusQuantify() {
-    if (int.parse(quantity) == 0) {
-      return Colors.red;
+    switch (productListItemVM.validateQuantityProducts(int.parse(quantity))) {
+      case StateQuantityProducts.empty:
+        return Colors.red;
+      case StateQuantityProducts.low:
+        return Colors.yellow;
+      case StateQuantityProducts.complete:
+        return Colors.green;
+      case StateQuantityProducts.unknown:
+        return Colors.grey;
     }
-    if (int.parse(quantity) > 0 && int.parse(quantity) < 10) {
-      return Colors.yellow;
-    }
-    if (int.parse(quantity) >= 0) {
-      return Colors.green;
-    }
-    return Colors.grey;
   }
 
   @override

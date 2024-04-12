@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:local_store/app/generated/translations.g.dart';
-import 'package:local_store/app/presentation/modules/home/HomePage.dart';
+import 'package:local_store/app/common/slangTexts//translations.g.dart';
+import 'package:local_store/app/modules/home/view/HomePage.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

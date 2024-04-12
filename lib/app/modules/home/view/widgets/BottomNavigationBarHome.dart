@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:local_store/app/generated/translations.g.dart';
-import 'package:local_store/app/presentation/modules/inventory/InventoryPage.dart';
+import 'package:local_store/app/common/slangTexts/translations.g.dart';
+import 'package:local_store/app/modules/inventory/view/InventoryPage.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({super.key});
