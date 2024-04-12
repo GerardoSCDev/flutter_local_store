@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:local_store/app/generated/translations.g.dart';
+import 'package:local_store/app/common/slangTexts//translations.g.dart';
 
 class FilterBar extends StatelessWidget {
   const FilterBar({super.key});

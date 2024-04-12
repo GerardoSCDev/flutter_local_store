@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:local_store/app/presentation/modules/home/widgets/BottomNavigationBarHome.dart';
+import 'package:local_store/app/modules/home/view/widgets/BottomNavigationBarHome.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

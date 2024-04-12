@@ -1,0 +1,1 @@
+enum StateQuantityProducts {  empty, low, complete, unknown}

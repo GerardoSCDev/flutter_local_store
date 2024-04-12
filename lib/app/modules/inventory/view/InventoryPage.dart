@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:local_store/app/presentation/modules/inventory/widgets/FilterBar.dart';
-import 'package:local_store/app/presentation/modules/inventory/widgets/ProductListItem.dart';
+import 'package:local_store/app/modules/inventory/view/widgets/FilterBar.dart';
+import 'package:local_store/app/modules/inventory/view/widgets/ProductListItem.dart';
 
 final List<String> productsName = [
   'Paquete individual galletas',
