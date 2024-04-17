@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:local_store/app/common/slangTexts/translations.g.dart';
 import 'package:local_store/app/modules/inventory/view/InventoryPage.dart';
+import 'package:local_store/app/modules/inventory/view/NewProductFormBottomSheet.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({super.key});
@@ -55,7 +58,14 @@ class _BottomNavigationBarHome extends State<BottomNavigationBarHome> {
                   Icons.add_circle_outline,
                   color: Colors.white,
                 ),
-                onPressed: () {})
+                onPressed: () {
+                  showModalBottomSheet<void>(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return const NewProductFormBottomSheet();
+                      }
+                  );
+                })
           ],
         ),
         body: Center(
