@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:local_store/app/common/slangTexts//translations.g.dart';
 
+import '../FilterOptionsBottomSheet.dart';
+
 class FilterBar extends StatelessWidget {
   const FilterBar({super.key});
 
@@ -41,7 +43,14 @@ class FilterBar extends StatelessWidget {
                     ),
                   ),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet<void>(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return const FilterOptionsBottomSheet();
+                            }
+                        );
+                      },
                       icon: const Icon(Icons.tune_rounded,
                           color: Colors.white)),
                 ],
