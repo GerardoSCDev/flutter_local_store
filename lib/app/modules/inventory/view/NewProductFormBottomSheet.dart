@@ -12,34 +12,30 @@ class NewProductFormBottomSheet extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-
             Container(
               width: 100,
               height: 5,
               margin: const EdgeInsets.only(top: 5),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.black
-              ),
+                  borderRadius: BorderRadius.circular(10), color: Colors.black),
             ),
-
             Column(
               children: [
-
                 Container(
-                    margin: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 30, top: 20),
+                    margin: const EdgeInsets.only(
+                        left: 10.0, right: 10.0, bottom: 30, top: 20),
                     height: 30,
                     width: double.infinity,
                     child: const Center(
                       child: Text(
                         'Nuevo producto',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 25),
                       ),
-                    )
-                ),
-
+                    )),
                 Container(
-                  margin: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 30),
+                  margin: const EdgeInsets.only(
+                      left: 10.0, right: 10.0, bottom: 30),
                   height: 50,
                   width: double.infinity,
                   child: TextField(
@@ -50,13 +46,12 @@ class NewProductFormBottomSheet extends StatelessWidget {
                         suffixIcon: InkWell(
                           onTap: () {},
                           child: const Icon(Icons.document_scanner_outlined),
-                        )
-                    ),
+                        )),
                   ),
                 ),
-
                 Container(
-                  margin: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 30),
+                  margin: const EdgeInsets.only(
+                      left: 10.0, right: 10.0, bottom: 30),
                   height: 50,
                   width: double.infinity,
                   child: const TextField(
@@ -67,9 +62,9 @@ class NewProductFormBottomSheet extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Container(
-                  margin: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 30),
+                  margin: const EdgeInsets.only(
+                      left: 10.0, right: 10.0, bottom: 30),
                   height: 50,
                   width: double.infinity,
                   child: const TextField(
@@ -80,9 +75,9 @@ class NewProductFormBottomSheet extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Container(
-                  margin: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 30),
+                  margin: const EdgeInsets.only(
+                      left: 10.0, right: 10.0, bottom: 30),
                   height: 55,
                   width: double.infinity,
                   child: ElevatedButton(
@@ -96,12 +91,11 @@ class NewProductFormBottomSheet extends StatelessWidget {
                     ),
                   ),
                 )
-
-              ],)
+              ],
+            )
           ],
         ),
       ),
     );
   }
-
 }

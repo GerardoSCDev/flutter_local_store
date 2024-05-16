@@ -6,9 +6,5 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   LocaleSettings.useDeviceLocale();
 
-  runApp(
-      TranslationProvider(
-          child: const MyApp()
-      )
-  );
+  runApp(TranslationProvider(child: const MyApp()));
 }
